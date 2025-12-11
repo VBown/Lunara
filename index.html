@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunara - Case Study Técnico</title>
+    
+    <!-- Fuentes: Inter (para UI técnica) y Fira Code (para código) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lunaraPrimary: '#FF8C69',
+                        lunaraSecondary: '#B6A1C4',
+                        techDark: '#0F172A',
+                        techCard: '#1E293B',
+                        codeBg: '#0D1117',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Highlight.js para colorear el código -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- HERO TÉCNICO -->
+    <header class="bg-techDark text-white pt-20 pb-24 px-6 border-b-4 border-lunaraPrimary">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="px-3 py-1 rounded bg-lunaraPrimary/20 text-lunaraPrimary text-xs font-mono font-bold border border-lunaraPrimary/30">ANDROID NATIVE</span>
+                    <span class="px-3 py-1 rounded bg-blue-500/20 text-blue-400 text-xs font-mono font-bold border border-blue-500/30">KOTLIN</span>
+                    <span class="px-3 py-1 rounded bg-purple-500/20 text-purple-400 text-xs font-mono font-bold border border-purple-500/30">AI INTEGRATION</span>
+                </div>
+                <h1 class="text-5xl font-bold mb-4 tracking-tight">Lunara AI Wellness</h1>
+                <p class="text-xl text-slate-400 mb-8 font-light">
+                    Una aplicación nativa moderna que combina <strong class="text-white">IA Generativa (Gemini)</strong> con lógica de negocio compleja para personalizar planes de bienestar en tiempo real.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="px-6 py-3 bg-white text-techDark font-semibold rounded-lg hover:bg-gray-100 transition flex items-center gap-2">
+                        <i class="ph-bold ph-github-logo"></i> Ver Repositorio
+                    </a>
+                    <a href="#" class="px-6 py-3 border border-slate-600 text-slate-300 font-medium rounded-lg hover:bg-slate-800 transition flex items-center gap-2">
+                        <i class="ph-bold ph-figma-logo"></i> Ver Diseño
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <!-- Mockup Flotante -->
+                <div class="absolute inset-0 bg-lunaraSecondary/20 blur-3xl rounded-full"></div>
+                <img src="https://placehold.co/300x600/1E293B/FFFFFF?text=App+Mockup" alt="App Screen" class="relative z-10 mx-auto rounded-[2rem] shadow-2xl border-8 border-slate-800 transform rotate-[-5deg] hover:rotate-0 transition duration-500">
+            </div>
+        </div>
+    </header>
+
+    <!-- TECH STACK GRID -->
+    <section class="py-12 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-center text-sm font-bold text-slate-400 mb-8 uppercase tracking-widest">Tech Stack & Librerías</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex flex-col items-center gap-2">
+                    <i class="ph-fill ph-android-logo text-4xl text-green-500"></i>
+                    <span class="font-mono text-sm">Kotlin / Jetpack Compose</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i class="ph-fill ph-fire text-4xl text-orange-500"></i>
+                    <span class="font-mono text-sm">Firebase (Auth & Firestore)</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i class="ph-fill ph-sparkle text-4xl text-blue-500"></i>
+                    <span class="font-mono text-sm">Google Gemini SDK</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i class="ph-fill ph-arrows-left-right text-4xl text-purple-500"></i>
+                    <span class="font-mono text-sm">MVVM & Coroutines</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i class="ph-fill ph-paint-brush text-4xl text-pink-500"></i>
+                    <span class="font-mono text-sm">Material Design 3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHALLENGE & SOLUTION -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                    <i class="ph-duotone ph-target text-lunaraPrimary"></i> El Desafío
+                </h2>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Crear una experiencia de bienestar personalizada para mujeres en transición hormonal que no se sintiera estática ni genérica. El sistema necesitaba adaptar recomendaciones médicas complejas basándose en el <em>input</em> diario variable (síntomas, ánimo, sueño) de la usuaria.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <i class="ph-bold ph-warning-circle text-red-400 mt-1"></i>
+                        <span>Gestión de estado complejo con múltiples variables de salud.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <i class="ph-bold ph-warning-circle text-red-400 mt-1"></i>
+                        <span>Integración de IA con baja latencia y alta relevancia contextual.</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                    <i class="ph-duotone ph-lightbulb text-green-500"></i> La Solución
+                </h2>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Implementé una <strong>Arquitectura Híbrida</strong>. Un motor de reglas determinista asigna un "Plan Base" seguro y validado médicamente, mientras que una capa de <strong>IA Generativa (Gemini)</strong> procesa los registros diarios para personalizar el tono, la motivación y los micro-ajustes del plan.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <i class="ph-bold ph-check-circle text-green-500 mt-1"></i>
+                        <span>Arquitectura MVVM limpia para separar lógica de UI.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <i class="ph-bold ph-check-circle text-green-500 mt-1"></i>
+                        <span>Repositorio local para planes base (offline-first).</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <i class="ph-bold ph-check-circle text-green-500 mt-1"></i>
+                        <span>Prompt Engineering avanzado para respuestas JSON estructuradas.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CODE SHOWCASE SECTION -->
+    <section class="py-20 bg-slate-900 text-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Ingeniería de IA</h2>
+                <p class="text-slate-400">Cómo integré Gemini para generar respuestas estructuradas (JSON) y dinámicas.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Bloque de Código -->
+                <div class="bg-codeBg rounded-xl border border-slate-700 overflow-hidden shadow-2xl">
+                    <div class="bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-700">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-2 font-mono text-xs text-slate-400">DashboardViewModel.kt</span>
+                    </div>
+                    <div class="p-4 overflow-x-auto">
+<pre><code class="language-kotlin">private suspend fun generateDashboardContent(
+    profile: UserProfile, 
+    log: DailyLog?
+): DashboardContent {
+    
+    // Prompt Engineering Contextual
+    val prompt = """
+        Eres 'Lunara', asistente experta.
+        Usuaria: ${profile.nombre}. Objetivo: ${profile.objetivos.first()}.
+        Datos de hoy: Energía ${log?.energyLevel}/5, Sueño ${log?.sleepQuality}/5.
+        
+        Genera un JSON con:
+        1. "greeting": Saludo empático corto.
+        2. "dailyPlan": Lista de 3 tareas breves (Nutrición, Ejercicio).
+        NO uses emojis en el JSON.
+    """.trimIndent()
+
+    // Llamada Asíncrona a Gemini
+    val response = generativeModel.generateContent(prompt)
+    
+    // Parseo seguro a Data Class de Kotlin
+    return response.responseAs<DashboardContent>() 
+           ?: DashboardContent.Error
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- Explicación -->
+                <div class="flex flex-col justify-center">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-lunaraPrimary mb-2">Prompt Engineering Dinámico</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            El prompt no es estático. Se construye en tiempo de ejecución inyectando variables del <code>UserProfile</code> (Firestore) y el <code>DailyLog</code> (Tracking). Esto garantiza que la IA tenga contexto total antes de responder.
+                        </p>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-lunaraSecondary mb-2">Respuesta Estructurada (JSON Mode)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            En lugar de texto libre, forzamos a Gemini a devolver un JSON que mapea directamente a nuestras data classes de Kotlin (<code>@Serializable</code>). Esto permite renderizar UI nativa (Cards, Listas) a partir de la "imaginación" de la IA.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-400 mb-2">Gestión de Estado con Coroutines</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Todo el proceso ocurre fuera del hilo principal usando <code>viewModelScope</code> y <code>suspend functions</code>, garantizando que la UI nunca se congele mientras la IA "piensa".
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAROUSEL / UI SHOWCASE -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-slate-800 mb-12">Interfaz de Usuario (Jetpack Compose)</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Screen 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[9/19] bg-slate-50 group-hover:-translate-y-2 transition duration-300">
+                         <img src="https://placehold.co/400x850/F5F5DC/333333?text=Onboarding" alt="Onboarding" class="object-cover w-full h-full">
+                    </div>
+                    <h3 class="mt-4 font-bold text-slate-700">Onboarding Inteligente</h3>
+                    <p class="text-sm text-slate-500">Captura de datos para perfilado.</p>
+                </div>
+                <!-- Screen 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[9/19] bg-slate-50 group-hover:-translate-y-2 transition duration-300">
+                         <img src="https://placehold.co/400x850/F5F5DC/333333?text=Dashboard+IA" alt="Dashboard" class="object-cover w-full h-full">
+                    </div>
+                    <h3 class="mt-4 font-bold text-slate-700">Dashboard Dinámico</h3>
+                    <p class="text-sm text-slate-500">Contenido generado por IA diariamente.</p>
+                </div>
+                <!-- Screen 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[9/19] bg-slate-50 group-hover:-translate-y-2 transition duration-300">
+                         <img src="https://placehold.co/400x850/F5F5DC/333333?text=Tracking" alt="Tracking" class="object-cover w-full h-full">
+                    </div>
+                    <h3 class="mt-4 font-bold text-slate-700">Tracking Diario</h3>
+                    <p class="text-sm text-slate-500">Registro de síntomas y estado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-50 py-12 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">¿Listo para ver el código?</h2>
+            <a href="#" class="inline-flex items-center gap-2 text-lunaraPrimary font-bold hover:underline text-lg">
+                <i class="ph-bold ph-github-logo"></i> Visitar Repositorio en GitHub
+            </a>
+            <p class="mt-8 text-slate-400 text-sm">
+                Desarrollado por <strong>Amarilis Darai</strong> como proyecto final de Bootcamp. 2025.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
